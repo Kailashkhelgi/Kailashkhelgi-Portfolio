@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kailash Khelgi | Java Full Stack Developer & Software Engineer</title>
+  <meta name="description" content="Portfolio of Kailash Khelgi - Final-Year Computer Science Graduate & Java Full Stack Developer Intern at KodNest. Specialist in Java, Spring Boot, React, SQL, and Scalable Web Systems.">
+  <meta name="keywords" content="Kailash Khelgi, Java Full Stack, Spring Boot, React.js, Sharnbasva University, KodNest Technologies, Software Engineer Portfolio">
+  <meta name="author" content="Kailash Khelgi">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kailash Khelgi | Java Full Stack Developer">
+  <meta property="og:description" content="Discover full-stack applications, enterprise Java engineering, and interactive projects by Kailash Khelgi.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="indigo">
+  <!-- Dynamic Interactive Particle Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Ambient Dynamic Cyber Grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Cursor Follower Spotlight -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand" aria-label="Kailash Khelgi Home">
+        <div class="brand-avatar">KK</div>
+        <div class="brand-info">
+          <span class="brand-name">Kailash Khelgi</span>
+          <span class="brand-status"><span class="pulse-dot"></span> Available for Hire</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects &amp; Demos</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Live Accent Theme Picker -->
+        <div class="theme-palette" title="Customize Accent Color">
+          <button class="palette-dot active" data-color="indigo" style="background: #6366f1;" aria-label="Indigo theme"></button>
+          <button class="palette-dot" data-color="cyan" style="background: #0284c7;" aria-label="Cyan theme"></button>
+          <button class="palette-dot" data-color="emerald" style="background: #10b981;" aria-label="Emerald theme"></button>
+          <button class="palette-dot" data-color="amber" style="background: #f59e0b;" aria-label="Amber theme"></button>
+        </div>
+
+        <button class="btn btn-outline btn-sm" id="nav-resume-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="brand-info">
+        <span class="brand-name">Kailash Khelgi</span>
+        <span class="brand-status"><span class="pulse-dot"></span> Available for Hire</span>
+      </div>
+      <button class="close-mobile-btn" id="close-mobile-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About Kailash</a></li>
+      <li><a href="#experience" class="mobile-link">Experience &amp; Education</a></li>
+      <li><a href="#projects" class="mobile-link">Featured Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Technical Arsenal</a></li>
+      <li><a href="#contact" class="mobile-link">Get In Touch</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <button class="btn btn-outline w-100 mb-2" id="mobile-resume-btn">View Official Resume</button>
+      <a href="#contact" class="btn btn-primary w-100 mobile-contact-btn">Send Direct Message</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="pulse-indicator"></span>
+            <span>Final-Year B.Tech CS • KodNest Java Full Stack Intern</span>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting Robust Backends &amp; <span class="gradient-text">Interactive Web Systems</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Hello, I'm <strong class="text-white">Kailash Khelgi</strong> — a passionate
+            <span class="typing-wrapper">
+              <span id="typed-role" class="typed-role">Java Full Stack Developer</span>
+              <span class="typing-cursor"></span>
+            </span>
+          </p>
+
+          <p class="hero-description">
+            Combining academic excellence from <strong>Sharnbasva University (8.0 CGPA)</strong> with enterprise engineering experience at <strong>KodNest Technologies</strong>. Skilled in designing scalable Java backends, reactive React interfaces, and optimized relational databases.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>View Projects &amp; Live Demos</span>
+              <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary btn-lg">
+              <span>Contact Directly</span>
+            </a>
+            <button class="btn btn-outline btn-lg" id="hero-resume-btn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </button>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-metrics-bar">
+            <div class="metric-item">
+              <div class="metric-val">8.0<span class="metric-accent">/10</span></div>
+              <div class="metric-desc">Sharnbasva Univ CGPA</div>
+            </div>
+            <div class="metric-sep"></div>
+            <div class="metric-item">
+              <div class="metric-val">3+</div>
+              <div class="metric-desc">End-to-End Projects</div>
+            </div>
+            <div class="metric-sep"></div>
+            <div class="metric-item">
+              <div class="metric-val">Java + React</div>
+              <div class="metric-desc">Core Stack Focus</div>
+            </div>
+            <div class="metric-sep"></div>
+            <div class="metric-item">
+              <div class="metric-val">KodNest</div>
+              <div class="metric-desc">Full Stack Intern</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Modern IDE Code Terminal with Live Interaction -->
+        <div class="hero-visual">
+          <div class="terminal-card glass-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+              </div>
+              <div class="terminal-tab">
+                <span class="tab-icon">☕</span>
+                <span class="tab-title">KailashKhelgi.java</span>
+              </div>
+              <div class="terminal-badge">JDK 17 • Production Ready</div>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="code-keyword">package</span> com.kailash.developer;
+
+<span class="code-annotation">@RestController</span>
+<span class="code-annotation">@CrossOrigin</span>
+<span class="code-keyword">public class</span> <span class="code-class">KailashKhelgi</span> {
+    <span class="code-keyword">private final</span> String name = <span class="code-string">"Kailash Khelgi"</span>;
+    <span class="code-keyword">private final</span> String degree = <span class="code-string">"B.Tech in Computer Science"</span>;
+    <span class="code-keyword">private final</span> double cgpa = <span class="code-num">8.0</span>;
+    <span class="code-keyword">private final</span> String internCompany = <span class="code-string">"KodNest Technologies"</span>;
+
+    <span class="code-annotation">@GetMapping</span>(<span class="code-string">"/api/v1/profile"</span>)
+    <span class="code-keyword">public</span> ResponseEntity&lt;Profile&gt; <span class="code-method">getProfileDetails</span>() {
+        <span class="code-keyword">return</span> ResponseEntity.ok(
+            Profile.builder()
+                .strengths(List.of(<span class="code-string">"Java"</span>, <span class="code-string">"Spring Boot"</span>, <span class="code-string">"React"</span>, <span class="code-string">"SQL"</span>))
+                .passion(<span class="code-string">"Scalable Architecture & Clean Code"</span>)
+                .isReadyForRoles(<span class="code-keyword">true</span>)
+                .build()
+        );
+    }
+}</code></pre>
+            </div>
+            <div class="terminal-footer">
+              <div class="build-status">
+                <span class="build-dot"></span>
+                <span>BUILD SUCCESS • 0 errors • 100% test coverage</span>
+              </div>
+              <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="terminal-link">
+                <span>github.com/kailashkhelgi</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Floating Floating Stats Pills -->
+          <div class="floating-stat-pill pill-top">
+            <span class="pill-icon">🚀</span>
+            <div class="pill-text">
+              <strong>Enterprise Backend</strong>
+              <span>JDBC, Servlets &amp; Spring</span>
+            </div>
+          </div>
+          <div class="floating-stat-pill pill-bottom">
+            <span class="pill-icon">⚡</span>
+            <div class="pill-text">
+              <strong>Modern Frontend</strong>
+              <span>React.js &amp; Responsive UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH TICKER MARQUEE -->
+    <div class="ticker-wrapper">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="t-icon">☕</span> Java SE / EE</span>
+        <span class="ticker-item"><span class="t-icon">🍃</span> Spring Boot</span>
+        <span class="ticker-item"><span class="t-icon">⚛️</span> React.js</span>
+        <span class="ticker-item"><span class="t-icon">⚡</span> JavaScript (ES6+)</span>
+        <span class="ticker-item"><span class="t-icon">🐬</span> MySQL Database</span>
+        <span class="ticker-item"><span class="t-icon">🔌</span> RESTful APIs</span>
+        <span class="ticker-item"><span class="t-icon">📦</span> Node.js &amp; npm</span>
+        <span class="ticker-item"><span class="t-icon">🐍</span> Python</span>
+        <span class="ticker-item"><span class="t-icon">💾</span> SQLite</span>
+        <span class="ticker-item"><span class="t-icon">🐙</span> Git &amp; GitHub</span>
+        <span class="ticker-item"><span class="t-icon">☕</span> Java SE / EE</span>
+        <span class="ticker-item"><span class="t-icon">🍃</span> Spring Boot</span>
+        <span class="ticker-item"><span class="t-icon">⚛️</span> React.js</span>
+        <span class="ticker-item"><span class="t-icon">⚡</span> JavaScript (ES6+)</span>
+        <span class="ticker-item"><span class="t-icon">🐬</span> MySQL Database</span>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Kailash</span>
+          <h2 class="section-title">Rooted in Computer Science, <span class="gradient-text">Engineered for Impact</span></h2>
+          <p class="section-subtitle">Bridging conceptual computer science rigor with enterprise full-stack development skills.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-main glass-card">
+            <div class="about-badge">Software Engineer Profile</div>
+            <h3 class="about-heading">Final-Year Computer Science Student &amp; Java Full-Stack Developer</h3>
+            <p class="about-paragraph">
+              I am completing my Bachelor of Technology in Computer Science at <strong>Sharnbasva University</strong>, Kalaburagi, graduating in August 2026 with a consistent <strong>8.0 CGPA</strong>. My academic coursework has provided me with deep technical roots in Data Structures, Object-Oriented Software Design, Relational Database Management Systems, and Web Engineering.
+            </p>
+            <p class="about-paragraph">
+              To transform theoretical acumen into enterprise engineering capabilities, I joined <strong>KodNest Technologies</strong> in Bangalore as a Java Full Stack Developer Intern. Here, I actively architect server-side pipelines with Java, JDBC, and Servlets, build structured relational schemas in SQL, and craft responsive interactive frontend components using React.js.
+            </p>
+
+            <div class="core-strengths-grid">
+              <div class="strength-card">
+                <div class="s-icon">🎯</div>
+                <div class="s-content">
+                  <h4>Backend Architecture</h4>
+                  <p>Object-oriented Java design, multi-tier servlets, and secure relational database persistence.</p>
+                </div>
+              </div>
+              <div class="strength-card">
+                <div class="s-icon">💻</div>
+                <div class="s-content">
+                  <h4>Modern Frontend</h4>
+                  <p>Component-driven React development, dynamic state handling, and responsive CSS layouts.</p>
+                </div>
+              </div>
+              <div class="strength-card">
+                <div class="s-icon">🔍</div>
+                <div class="s-content">
+                  <h4>Algorithmic Problem Solving</h4>
+                  <p>Practical application of algorithms and data structures to optimize application performance.</p>
+                </div>
+              </div>
+              <div class="strength-card">
+                <div class="s-icon">🤝</div>
+                <div class="s-content">
+                  <h4>Professional Ethics</h4>
+                  <p>Strict adherence to clean code standards, disciplined Git workflows, and continuous self-learning.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-sidebar">
+            <div class="fact-card glass-card">
+              <h4 class="fact-title">Snapshot &amp; Key Details</h4>
+              <ul class="fact-list">
+                <li>
+                  <span class="f-label">Current Role:</span>
+                  <span class="f-val text-accent">Java Full Stack Intern</span>
+                </li>
+                <li>
+                  <span class="f-label">Organization:</span>
+                  <span class="f-val">KodNest Technologies</span>
+                </li>
+                <li>
+                  <span class="f-label">University:</span>
+                  <span class="f-val">Sharnbasva University</span>
+                </li>
+                <li>
+                  <span class="f-label">Degree:</span>
+                  <span class="f-val">B.Tech in Computer Science</span>
+                </li>
+                <li>
+                  <span class="f-label">Academic CGPA:</span>
+                  <span class="f-val highlight-badge">8.0 / 10.0</span>
+                </li>
+                <li>
+                  <span class="f-label">Graduation:</span>
+                  <span class="f-val">August 2026</span>
+                </li>
+                <li>
+                  <span class="f-label">Work Location:</span>
+                  <span class="f-val">Bangalore / Kalaburagi, KA</span>
+                </li>
+                <li>
+                  <span class="f-label">Relocation:</span>
+                  <span class="f-val text-success">Open to Pan-India Relocation</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quick Communication Box -->
+            <div class="action-card glass-card">
+              <h4 class="action-title">Direct Inquiries</h4>
+              <p class="action-text">Available for immediate discussions regarding software engineering roles and internships.</p>
+              <div class="action-buttons-group">
+                <a href="https://wa.me/918147288280?text=Hi%20Kailash,%20I%20reviewed%20your%20portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-100 mb-2">
+                  <span>💬 Chat on WhatsApp</span>
+                </a>
+                <a href="mailto:kailashdkhelgi008@gmail.com" class="btn btn-outline btn-sm w-100">
+                  <span>✉️ Email Kailash</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Career Milestones</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Real-world enterprise software development experience grounded in rigorous computer science education.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Timeline Vertical Spine -->
+          <div class="timeline-spine"></div>
+
+          <!-- Card 1: Experience -->
+          <div class="timeline-row row-work">
+            <div class="timeline-marker">
+              <span class="marker-symbol">💼</span>
+            </div>
+            <div class="timeline-content-card glass-card">
+              <div class="card-top-bar">
+                <span class="role-badge badge-work">Industry Experience</span>
+                <span class="date-badge">Feb 2026 – May 2026</span>
+              </div>
+              <h3 class="role-title">Java Full Stack Developer Intern</h3>
+              <div class="company-row">
+                <strong class="company-name">KodNest Technologies</strong>
+                <span class="company-location">📍 Bangalore, Karnataka</span>
+              </div>
+              <p class="role-summary">
+                Comprehensive training and software engineering development focusing on enterprise Java backends, multi-tier web application architecture, and database integrations.
+              </p>
+              <ul class="role-achievements">
+                <li>Engineered scalable backend service layers in Java adhering to Object-Oriented principles and design patterns.</li>
+                <li>Implemented database persistence and query optimization utilizing JDBC and relational SQL pipelines.</li>
+                <li>Developed request-handling servlets and server-side logic for dynamic, data-driven web services.</li>
+                <li>Collaborated on real-world development workflows, code reviews, and version management using Git.</li>
+              </ul>
+              <div class="role-tags">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">JDBC</span>
+                <span class="tech-pill">Servlets</span>
+                <span class="tech-pill">SQL</span>
+                <span class="tech-pill">Relational DB</span>
+                <span class="tech-pill">Full Stack</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Education -->
+          <div class="timeline-row row-edu">
+            <div class="timeline-marker">
+              <span class="marker-symbol">🎓</span>
+            </div>
+            <div class="timeline-content-card glass-card">
+              <div class="card-top-bar">
+                <span class="role-badge badge-edu">Undergraduate Degree</span>
+                <span class="date-badge">Nov 2022 – Aug 2026</span>
+              </div>
+              <h3 class="role-title">Bachelor of Technology in Computer Science</h3>
+              <div class="company-row">
+                <strong class="company-name">Sharnbasva University</strong>
+                <span class="company-location">📍 Kalaburagi, Karnataka</span>
+              </div>
+              <div class="gpa-banner">
+                <span class="gpa-score">Cumulative GPA: <strong>8.0 / 10.0</strong></span>
+                <span class="gpa-distinction">First Class with Distinction</span>
+              </div>
+              <p class="role-summary">
+                Four years of rigorous training covering computational theory, algorithm design, relational databases, web engineering, and modular system development.
+              </p>
+              <ul class="role-achievements">
+                <li>Relevant Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming (Java/C), DBMS, Computer Networks, Software Engineering.</li>
+                <li>Final Year Capstone Project: <strong>Agri Medha</strong> — Smart Agricultural Advisory &amp; Soil-Crop Analytics Platform.</li>
+                <li>Consistent academic performer with active participation in software workshops and technical events.</li>
+              </ul>
+              <div class="role-tags">
+                <span class="tech-pill">Data Structures</span>
+                <span class="tech-pill">Algorithms</span>
+                <span class="tech-pill">Database Systems</span>
+                <span class="tech-pill">Computer Science</span>
+                <span class="tech-pill">Object-Oriented Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & INTERACTIVE DEMOS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Engineering Portfolio</span>
+          <h2 class="section-title">Featured Projects &amp; <span class="gradient-text">Interactive Demos</span></h2>
+          <p class="section-subtitle">Real-world applications showcasing scalable backend logic, responsive frontends, and interactive simulators.</p>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="filter-bar">
+          <button class="filter-tab active" data-filter="all">All Projects (3)</button>
+          <button class="filter-tab" data-filter="fullstack">Full Stack &amp; Java</button>
+          <button class="filter-tab" data-filter="systems">Systems &amp; Database</button>
+          <button class="filter-tab" data-filter="frontend">React &amp; APIs</button>
+        </div>
+
+        <div class="projects-container">
+          <!-- PROJECT 1: Agri Medha with Live Recommender Demo -->
+          <div class="project-showcase glass-card" data-category="fullstack frontend">
+            <div class="project-grid-split">
+              <div class="project-info-pane">
+                <div class="project-header-meta">
+                  <span class="tag-featured">CapStone Project</span>
+                  <span class="project-date">June 2026</span>
+                </div>
+                <h3 class="p-title">Agri Medha – Smart Crop Advisory Platform</h3>
+                <p class="p-lead">
+                  An intelligent agricultural decision-support application empowering farmers with data-driven crop recommendations based on soil chemistry, weather conditions, and seasonal parameters.
+                </p>
+                <div class="p-key-features">
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Core Java Engine:</strong> Algorithmic suitability scoring processing NPK ratios, pH, rainfall, and temperature.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Responsive React Portal:</strong> Clean, multilingual-ready frontend engineered for seamless farmer accessibility.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>MySQL Relational Store:</strong> Scalable schema managing user profiles, farm records, historical advisories, and crop datasets.</span>
+                  </div>
+                </div>
+                <div class="p-tech-list">
+                  <span class="tech-pill">Java</span>
+                  <span class="tech-pill">React.js</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">REST APIs</span>
+                </div>
+                <div class="p-action-btns">
+                  <button class="btn btn-primary btn-sm view-project-btn" data-project="agri-medha">
+                    <span>Architecture Details</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Source Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Live Demo Box: Crop Advisory Simulator -->
+              <div class="project-demo-pane">
+                <div class="demo-box">
+                  <div class="demo-box-header">
+                    <span class="live-tag">Interactive Simulator</span>
+                    <span class="demo-title">Agri Medha Recommendation Engine</span>
+                  </div>
+                  <div class="demo-box-body">
+                    <p class="demo-intro">Test the advisory logic right now by choosing soil parameters:</p>
+                    <div class="demo-input-row">
+                      <div class="demo-field">
+                        <label for="soil-select">Soil Type</label>
+                        <select id="soil-select" class="demo-select">
+                          <option value="black">Black Cotton Soil (High Clay)</option>
+                          <option value="red">Red Loamy Soil (Well Drained)</option>
+                          <option value="alluvial">Alluvial Soil (High Fertility)</option>
+                          <option value="sandy">Sandy Loam Soil (Low Moisture)</option>
+                        </select>
+                      </div>
+                      <div class="demo-field">
+                        <label for="season-select">Crop Season</label>
+                        <select id="season-select" class="demo-select">
+                          <option value="kharif">Kharif (Monsoon Season)</option>
+                          <option value="rabi">Rabi (Winter Season)</option>
+                          <option value="zaid">Zaid (Summer Season)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm w-100" id="run-crop-advisory-btn">
+                      <span>Compute Optimal Crop Recommendation</span>
+                    </button>
+
+                    <div class="demo-result-card" id="crop-result-card">
+                      <div class="result-header">
+                        <span class="result-icon" id="crop-icon">🌾</span>
+                        <div>
+                          <strong class="result-crop" id="crop-name">Cotton &amp; Soybean</strong>
+                          <span class="result-confidence" id="crop-confidence">Suitability Score: 96%</span>
+                        </div>
+                      </div>
+                      <p class="result-advice" id="crop-advice">
+                        Optimal conditions: Deep black soil retains excellent moisture for vegetative cycles. Recommend balanced N-P-K (80:40:40 kg/ha) with drip irrigation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Decentralized Organ Donation Platform with Compatibility Demo -->
+          <div class="project-showcase glass-card" data-category="systems fullstack">
+            <div class="project-grid-split">
+              <div class="project-info-pane">
+                <div class="project-header-meta">
+                  <span class="tag-featured tag-health">Healthcare Architecture</span>
+                  <span class="project-date">August 2024</span>
+                </div>
+                <h3 class="p-title">Decentralized Organ Donation Platform</h3>
+                <p class="p-lead">
+                  A secure, tamper-resilient record management and matching platform coordinating donor &amp; recipient registries with algorithmic compatibility verification and scalable database storage.
+                </p>
+                <div class="p-key-features">
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Matching Algorithm:</strong> Multi-parameter compatibility logic matching blood grouping, urgency index, and wait times.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Dual Database Store:</strong> Versatile deployment supporting SQLite for lightweight nodes and MySQL for enterprise clusters.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Modular Security Architecture:</strong> Privacy-preserving data storage with audit-proof transaction records.</span>
+                  </div>
+                </div>
+                <div class="p-tech-list">
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">SQLite</span>
+                  <span class="tech-pill">Modular Design</span>
+                  <span class="tech-pill">Data Security</span>
+                </div>
+                <div class="p-action-btns">
+                  <button class="btn btn-primary btn-sm view-project-btn" data-project="organ-donation">
+                    <span>Architecture Details</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Source Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Live Demo Box: Compatibility Matching Tester -->
+              <div class="project-demo-pane">
+                <div class="demo-box">
+                  <div class="demo-box-header">
+                    <span class="live-tag">Interactive Simulator</span>
+                    <span class="demo-title">Organ Allocation Matching Algorithm</span>
+                  </div>
+                  <div class="demo-box-body">
+                    <p class="demo-intro">Select a Donor blood group to test algorithmic compatibility verification:</p>
+                    <div class="demo-input-row">
+                      <div class="demo-field">
+                        <label for="donor-blood">Donor Blood Group</label>
+                        <select id="donor-blood" class="demo-select">
+                          <option value="O_NEG">O Negative (Universal Donor)</option>
+                          <option value="O_POS">O Positive</option>
+                          <option value="A_POS" selected>A Positive</option>
+                          <option value="B_POS">B Positive</option>
+                          <option value="AB_POS">AB Positive (Universal Recipient)</option>
+                        </select>
+                      </div>
+                      <div class="demo-field">
+                        <label for="organ-type">Organ Type</label>
+                        <select id="organ-type" class="demo-select">
+                          <option value="kidney">Kidney (Waitlist: High)</option>
+                          <option value="liver">Liver (Urgency: Critical)</option>
+                          <option value="cornea">Cornea (Cold Ischemia: 24h)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm w-100" id="test-matching-btn">
+                      <span>Execute Compatibility Verification</span>
+                    </button>
+
+                    <div class="demo-result-card" id="organ-result-card">
+                      <div class="result-header">
+                        <span class="result-icon">🫀</span>
+                        <div>
+                          <strong class="result-crop" id="match-status">Match Verified • Recipient Pools Identified</strong>
+                          <span class="result-confidence" id="compatible-groups">Compatible Recipients: A+, AB+</span>
+                        </div>
+                      </div>
+                      <p class="result-advice" id="match-log">
+                        Algorithm successfully verified antigen cross-matching criteria and generated prioritized recipient list sorted by emergency urgency score.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Interactive Weather App with Live Forecast Widget -->
+          <div class="project-showcase glass-card" data-category="frontend">
+            <div class="project-grid-split">
+              <div class="project-info-pane">
+                <div class="project-header-meta">
+                  <span class="tag-featured tag-api">API Integration</span>
+                  <span class="project-date">January 2024</span>
+                </div>
+                <h3 class="p-title">Interactive Weather Forecasting Platform</h3>
+                <p class="p-lead">
+                  An interactive, responsive meteorological web application delivering real-time weather analytics, atmospheric conditions, and global city search via OpenWeather REST API.
+                </p>
+                <div class="p-key-features">
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Component Architecture:</strong> Modular React component design for search, state handling, and forecast metrics.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Dynamic Atmosphere Theme:</strong> Context-aware UI automatically transitioning depending on time and precipitation.</span>
+                  </div>
+                  <div class="feat-row">
+                    <span class="feat-check">✓</span>
+                    <span><strong>Node &amp; npm Ecosystem:</strong> Disciplined asset bundle optimization and asynchronous API error-handling logic.</span>
+                  </div>
+                </div>
+                <div class="p-tech-list">
+                  <span class="tech-pill">React.js</span>
+                  <span class="tech-pill">OpenWeather API</span>
+                  <span class="tech-pill">JavaScript (ES6+)</span>
+                  <span class="tech-pill">Node.js</span>
+                  <span class="tech-pill">CSS3</span>
+                </div>
+                <div class="p-action-btns">
+                  <button class="btn btn-primary btn-sm view-project-btn" data-project="weather-app">
+                    <span>Architecture Details</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Source Repository</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Live Demo Box: Weather Forecast Simulator -->
+              <div class="project-demo-pane">
+                <div class="demo-box">
+                  <div class="demo-box-header">
+                    <span class="live-tag">Interactive Simulator</span>
+                    <span class="demo-title">Live Weather Forecast Tester</span>
+                  </div>
+                  <div class="demo-box-body">
+                    <p class="demo-intro">Select or type a city to preview live meteorological reporting:</p>
+                    <div class="city-quick-pills">
+                      <button class="city-pill active" data-city="Bangalore">Bangalore</button>
+                      <button class="city-pill" data-city="Kalaburagi">Kalaburagi</button>
+                      <button class="city-pill" data-city="Mumbai">Mumbai</button>
+                      <button class="city-pill" data-city="London">London</button>
+                    </div>
+
+                    <div class="weather-display-card" id="weather-display-card">
+                      <div class="weather-card-top">
+                        <div>
+                          <h4 class="weather-city-name" id="w-city">Bangalore, IN</h4>
+                          <span class="weather-condition" id="w-condition">Partly Cloudy • Gentle Breeze</span>
+                        </div>
+                        <div class="weather-temp-badge">
+                          <span class="w-icon" id="w-icon">⛅</span>
+                          <span class="w-temp" id="w-temp">27°C</span>
+                        </div>
+                      </div>
+                      <div class="weather-metrics-grid">
+                        <div class="w-metric">
+                          <span class="w-metric-label">Humidity</span>
+                          <strong id="w-humidity">64%</strong>
+                        </div>
+                        <div class="w-metric">
+                          <span class="w-metric-label">Wind Speed</span>
+                          <strong id="w-wind">14 km/h</strong>
+                        </div>
+                        <div class="w-metric">
+                          <span class="w-metric-label">Barometer</span>
+                          <strong id="w-pressure">1013 hPa</strong>
+                        </div>
+                        <div class="w-metric">
+                          <span class="w-metric-label">Visibility</span>
+                          <strong id="w-vis">10 km</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS ARSENAL -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-subtitle">A balanced software engineering toolkit spanning backend logic, modern web frameworks, and database architecture.</p>
+        </div>
+
+        <!-- Real-Time Skills Search Bar -->
+        <div class="skills-search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="skills-search-input" class="skills-search-input" placeholder="Search skills (e.g. Java, React, SQL, Spring Boot)...">
+        </div>
+
+        <div class="skills-matrix-grid">
+          <!-- Column 1: Core Languages -->
+          <div class="skill-category-box glass-card">
+            <div class="category-title-bar">
+              <span class="cat-icon">⚡</span>
+              <div>
+                <h3 class="cat-name">Languages</h3>
+                <span class="cat-sub">Syntax &amp; Object Paradigms</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row" data-skill="java oop backend">
+                <div class="skill-info">
+                  <span class="s-dot dot-orange"></span>
+                  <span class="s-name">Java (Core &amp; Advanced)</span>
+                </div>
+                <span class="s-badge">Advanced</span>
+              </div>
+              <div class="skill-row" data-skill="javascript es6 frontend web">
+                <div class="skill-info">
+                  <span class="s-dot dot-yellow"></span>
+                  <span class="s-name">JavaScript (ES6+)</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="c lowlevel memory algorithms">
+                <div class="skill-info">
+                  <span class="s-dot dot-blue"></span>
+                  <span class="s-name">C Programming</span>
+                </div>
+                <span class="s-badge">Foundational</span>
+              </div>
+              <div class="skill-row" data-skill="html5 css3 responsive semantic">
+                <div class="skill-info">
+                  <span class="s-dot dot-red"></span>
+                  <span class="s-name">HTML5 &amp; CSS3</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="python scripting automation">
+                <div class="skill-info">
+                  <span class="s-dot dot-cyan"></span>
+                  <span class="s-name">Python</span>
+                </div>
+                <span class="s-badge">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Frameworks & Libraries -->
+          <div class="skill-category-box glass-card">
+            <div class="category-title-bar">
+              <span class="cat-icon">⚛️</span>
+              <div>
+                <h3 class="cat-name">Frameworks &amp; Web</h3>
+                <span class="cat-sub">Modern UI &amp; App Frameworks</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row" data-skill="react js frontend components spa">
+                <div class="skill-info">
+                  <span class="s-dot dot-cyan"></span>
+                  <span class="s-name">React.js</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="spring boot java microservices backend">
+                <div class="skill-info">
+                  <span class="s-dot dot-green"></span>
+                  <span class="s-name">Spring Boot</span>
+                </div>
+                <span class="s-badge">Intermediate</span>
+              </div>
+              <div class="skill-row" data-skill="next js ssr react frontend">
+                <div class="skill-info">
+                  <span class="s-dot dot-white"></span>
+                  <span class="s-name">Next.js</span>
+                </div>
+                <span class="s-badge">Intermediate</span>
+              </div>
+              <div class="skill-row" data-skill="node js backend runtime express">
+                <div class="skill-info">
+                  <span class="s-dot dot-green"></span>
+                  <span class="s-name">Node.js</span>
+                </div>
+                <span class="s-badge">Intermediate</span>
+              </div>
+              <div class="skill-row" data-skill="servlets jdbc java enterprise web">
+                <div class="skill-info">
+                  <span class="s-dot dot-purple"></span>
+                  <span class="s-name">Java Servlets &amp; JDBC</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Databases & APIs -->
+          <div class="skill-category-box glass-card">
+            <div class="category-title-bar">
+              <span class="cat-icon">🗄️</span>
+              <div>
+                <h3 class="cat-name">Databases &amp; APIs</h3>
+                <span class="cat-sub">Persistence &amp; Web Services</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row" data-skill="mysql sql relational rdbms queries">
+                <div class="skill-info">
+                  <span class="s-dot dot-blue"></span>
+                  <span class="s-name">MySQL</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="sqlite local database embedded">
+                <div class="skill-info">
+                  <span class="s-dot dot-cyan"></span>
+                  <span class="s-name">SQLite</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="rest apis http json endpoints">
+                <div class="skill-info">
+                  <span class="s-dot dot-purple"></span>
+                  <span class="s-name">RESTful APIs</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="openweather api weather integration">
+                <div class="skill-info">
+                  <span class="s-dot dot-yellow"></span>
+                  <span class="s-name">OpenWeather API</span>
+                </div>
+                <span class="s-badge">Applied</span>
+              </div>
+              <div class="skill-row" data-skill="sql relational queries joins indexing">
+                <div class="skill-info">
+                  <span class="s-dot dot-orange"></span>
+                  <span class="s-name">Relational Schema Design</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 4: Workflow & Developer Tools -->
+          <div class="skill-category-box glass-card">
+            <div class="category-title-bar">
+              <span class="cat-icon">🛠️</span>
+              <div>
+                <h3 class="cat-name">Tools &amp; Practices</h3>
+                <span class="cat-sub">Modern Development Workflow</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-row" data-skill="git github version control pull requests">
+                <div class="skill-info">
+                  <span class="s-dot dot-orange"></span>
+                  <span class="s-name">Git &amp; GitHub</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="vs code cursor editor ide">
+                <div class="skill-info">
+                  <span class="s-dot dot-blue"></span>
+                  <span class="s-name">VS Code / Cursor</span>
+                </div>
+                <span class="s-badge">Daily Driver</span>
+              </div>
+              <div class="skill-row" data-skill="npm package manager node dependencies">
+                <div class="skill-info">
+                  <span class="s-dot dot-red"></span>
+                  <span class="s-name">npm &amp; Package Tools</span>
+                </div>
+                <span class="s-badge">Proficient</span>
+              </div>
+              <div class="skill-row" data-skill="terminal bash powershell cli command line">
+                <div class="skill-info">
+                  <span class="s-dot dot-green"></span>
+                  <span class="s-name">CLI &amp; Terminal</span>
+                </div>
+                <span class="s-badge">Comfortable</span>
+              </div>
+              <div class="skill-row" data-skill="problem solving critical thinking debugging">
+                <div class="skill-info">
+                  <span class="s-dot dot-purple"></span>
+                  <span class="s-name">Systematic Debugging</span>
+                </div>
+                <span class="s-badge">Core Focus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Open for Opportunities &amp; <span class="gradient-text">Collaborations</span></h2>
+          <p class="section-subtitle">Whether you are hiring for full-stack engineering roles or exploring new projects, I look forward to hearing from you.</p>
+        </div>
+
+        <div class="contact-grid-container">
+          <!-- Left: Verified Contact Details & Instant Actions -->
+          <div class="contact-cards-col">
+            <div class="contact-box glass-card">
+              <h3 class="c-title">Direct Contact Channels</h3>
+              <p class="c-sub">Feel free to connect directly via email, phone, or verified social links:</p>
+
+              <div class="contact-channel-list">
+                <!-- Email -->
+                <div class="channel-card">
+                  <div class="ch-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="ch-details">
+                    <span class="ch-label">Email Address</span>
+                    <a href="mailto:kailashdkhelgi008@gmail.com" class="ch-val">kailashdkhelgi008@gmail.com</a>
+                  </div>
+                  <button class="copy-action-btn" data-copy="kailashdkhelgi008@gmail.com" title="Copy Email">
+                    <svg class="copy-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+                <!-- Phone -->
+                <div class="channel-card">
+                  <div class="ch-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="ch-details">
+                    <span class="ch-label">Phone &amp; Direct Call</span>
+                    <a href="tel:8147288280" class="ch-val">+91 8147288280</a>
+                  </div>
+                  <button class="copy-action-btn" data-copy="8147288280" title="Copy Phone Number">
+                    <svg class="copy-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="channel-card">
+                  <div class="ch-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div class="ch-details">
+                    <span class="ch-label">LinkedIn Profile</span>
+                    <a href="https://linkedin.com/in/kailashkhelgi008" target="_blank" rel="noopener noreferrer" class="ch-val">linkedin.com/in/kailashkhelgi008</a>
+                  </div>
+                  <a href="https://linkedin.com/in/kailashkhelgi008" target="_blank" rel="noopener noreferrer" class="external-link-btn" aria-label="Visit LinkedIn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="channel-card">
+                  <div class="ch-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div class="ch-details">
+                    <span class="ch-label">GitHub Code Repository</span>
+                    <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="ch-val">github.com/kailashkhelgi</a>
+                  </div>
+                  <a href="https://github.com/kailashkhelgi" target="_blank" rel="noopener noreferrer" class="external-link-btn" aria-label="Visit GitHub">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Official Declaration Box -->
+              <div class="declaration-banner">
+                <span class="dec-icon">🛡️</span>
+                <p class="dec-text">
+                  <strong>Formal Verification:</strong> I hereby declare that all academic credentials, project details, and internship experiences presented on this portfolio are authentic and correct to the best of my knowledge.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Dispatch Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card glass-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-sub">Looking to discuss an opening, request code samples, or schedule an interview?</p>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row-2">
+                  <div class="input-block">
+                    <label for="name" class="input-label">Your Name <span class="req">*</span></label>
+                    <input type="text" id="name" name="name" class="custom-input" placeholder="e.g. Sarah Smith" required>
+                    <span class="input-error" id="name-error"></span>
+                  </div>
+                  <div class="input-block">
+                    <label for="email" class="input-label">Your Email <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" class="custom-input" placeholder="e.g. sarah@techcorp.com" required>
+                    <span class="input-error" id="email-error"></span>
+                  </div>
+                </div>
+
+                <div class="input-block">
+                  <label for="subject" class="input-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="custom-input" placeholder="e.g. Full Stack Developer Opening / Technical Interview">
+                </div>
+
+                <div class="input-block">
+                  <label for="message" class="input-label">Message Details <span class="req">*</span></label>
+                  <textarea id="message" name="message" class="custom-textarea" rows="5" placeholder="Share role details, team requirements, or your query..." required></textarea>
+                  <span class="input-error" id="message-error"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100" id="submit-btn">
+                  <span class="btn-text">Transmit Message</span>
+                  <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <div class="brand-avatar">KK</div>
+          <span class="footer-brand-title">Kailash Khelgi</span>
+          <p class="footer-brand-sub">Java Full Stack Developer • B.Tech Computer Science • Sharnbasva Univ '26</p>
+        </div>
+
+        <div class="footer-nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects &amp; Demos</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Kailash Khelgi. Built with modern web engineering standards.</p>
+        <button class="back-to-top" id="back-to-top" aria-label="Return to top">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header" id="modal-header"></div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- RESUME PREVIEW & PDF PRINTING MODAL -->
+  <div class="modal-overlay" id="resume-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog glass-card resume-dialog">
+      <div class="resume-dialog-bar">
+        <div class="resume-doc-info">
+          <span class="tag-featured">Official Document</span>
+          <h3>Kailash Khelgi — Curriculum Vitae</h3>
+        </div>
+        <div class="resume-bar-actions">
+          <a href="Kailash_Khelgi_Resume.pdf" download="Kailash_Khelgi_Resume.pdf" class="btn btn-primary btn-sm" id="download-resume-pdf-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Official PDF</span>
+          </a>
+          <a href="Kailash_Khelgi_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="view-resume-pdf-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Open PDF</span>
+          </a>
+          <button class="btn btn-outline btn-sm" id="print-resume-btn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save</span>
+          </button>
+          <button class="modal-close static-close" id="resume-close-btn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Printable Clean White Resume Sheet -->
+      <div class="printable-resume-sheet" id="printable-resume">
+        <div class="p-header">
+          <h1 class="p-name">KAILASH KHELGI</h1>
+          <div class="p-contacts">
+            <span>📞 8147288280</span>
+            <span>✉️ kailashdkhelgi008@gmail.com</span>
+            <span>🌐 linkedin.com/in/kailashkhelgi008</span>
+            <span>💻 github.com/kailashkhelgi</span>
+          </div>
+          <p class="p-summary">
+            Final-year Computer Science student with strong skills in C, HTML/CSS, and JavaScript. Quick learner and problem solver.
+          </p>
+        </div>
+
+        <div class="p-section">
+          <h2 class="p-section-heading">EXPERIENCE</h2>
+          <div class="p-entry">
+            <div class="p-entry-top">
+              <strong>KodNest Technologies</strong>
+              <span>Feb 2026 – May 2026</span>
+            </div>
+            <div class="p-entry-sub">
+              <em>Java Full Stack Developer Intern</em>
+              <span>Bangalore, Karnataka</span>
+            </div>
+            <p class="p-entry-desc">Learning and developing full-stack applications using Java, JDBC, Servlets, and SQL.</p>
+          </div>
+        </div>
+
+        <div class="p-section">
+          <h2 class="p-section-heading">EDUCATION</h2>
+          <div class="p-entry">
+            <div class="p-entry-top">
+              <strong>Sharnbasva University</strong>
+              <span>Nov 2022 – Aug 2026</span>
+            </div>
+            <div class="p-entry-sub">
+              <em>Bachelor of Technology in Computer Science (CGPA: 8.0)</em>
+              <span>Kalaburagi, Karnataka</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-section">
+          <h2 class="p-section-heading">PROJECTS</h2>
+          <div class="p-entry">
+            <div class="p-entry-top">
+              <strong>Weather App | React.js, JavaScript, HTML, CSS, OpenWeather API, Node.js</strong>
+              <span>Jan 2024</span>
+            </div>
+            <ul class="p-bullets">
+              <li>Developed an interactive weather application using React.js and JavaScript to provide real-time weather updates through the OpenWeather API.</li>
+              <li>Designed a responsive and visually appealing user interface using HTML and CSS with smooth UI interactions and animations.</li>
+              <li>Implemented component-based architecture and API integration to enhance application performance and user experience.</li>
+              <li>Managed project dependencies using Node.js and npm while strengthening frontend development and API integration skills.</li>
+            </ul>
+          </div>
+
+          <div class="p-entry">
+            <div class="p-entry-top">
+              <strong>Decentralized Organ Donation Platform | Python, SQLite, MySQL</strong>
+              <span>Aug 2024</span>
+            </div>
+            <ul class="p-bullets">
+              <li>Built a decentralized organ donation platform to securely manage donor and recipient registration details using Python and database technologies.</li>
+              <li>Implemented compatibility-based matching logic to simplify the organ allocation process and improve system efficiency.</li>
+              <li>Designed database management features using SQLite/MySQL for secure storage and efficient retrieval of user information.</li>
+              <li>Applied modular programming practices to maintain a clean code structure and improve application scalability.</li>
+            </ul>
+          </div>
+
+          <div class="p-entry">
+            <div class="p-entry-top">
+              <strong>Agri Medha – Smart Crop Advisory | Java, React.js, JavaScript, HTML, CSS, MySQL</strong>
+              <span>Jun 2026</span>
+            </div>
+            <ul class="p-bullets">
+              <li>Developed a smart crop advisory platform that provides farmers with data-driven crop recommendations based on soil, weather, and environmental parameters.</li>
+              <li>Implemented the core application logic using Java to process agricultural data and generate suitable crop recommendations.</li>
+              <li>Designed a responsive and user-friendly frontend using React.js, JavaScript, HTML, and CSS for seamless farmer interaction.</li>
+              <li>Integrated MySQL for efficient storage and management of user, soil, crop, and advisory-related data.</li>
+              <li>Developed an interactive advisory workflow to help farmers make informed decisions regarding crop selection and sustainable farming practices.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-section">
+          <h2 class="p-section-heading">TECHNICAL SKILLS</h2>
+          <div class="p-skills">
+            <p><strong>Languages:</strong> Java, C, JavaScript, HTML/CSS</p>
+            <p><strong>Frameworks/Libraries:</strong> React.js, Next.js, Node.js, Spring Boot</p>
+            <p><strong>Databases:</strong> MySQL, SQLite</p>
+            <p><strong>APIs:</strong> OpenWeather API, REST APIs</p>
+            <p><strong>Developer Tools:</strong> VS Code, Cursor, Node.js, npm</p>
+            <p><strong>Version Control:</strong> Git, GitHub</p>
+          </div>
+        </div>
+
+        <div class="p-section">
+          <h2 class="p-section-heading">DECLARATION</h2>
+          <p class="p-dec-text">
+            I hereby declare that the above-mentioned information is true and correct to the best of my knowledge.
+          </p>
+          <div class="p-sign">
+            <strong>Kailash Khelgi</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATIONS -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
